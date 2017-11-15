@@ -1,0 +1,69 @@
+Script started on Wed 15 Nov 2017 11:58:41 AM PST
+]0;brune010@empress:~/cs421/DemosAndEC/4_LL1[brune010@empress 4_LL1]$ g++ ll1.cpp
+]0;brune010@empress:~/cs421/DemosAndEC/4_LL1[brune010@empress 4_LL1]$ ./a.out
+row S col S :  
+row S col A :  
+row S col B :  
+row S col 0 : 0A0
+row S col 1 : 1A1
+row A col S :  
+row A col A :  
+row A col B :  
+row A col 0 : 00
+row A col 1 : 11
+row B col S :  
+row B col A :  
+row B col B :  
+row B col 0 :  
+row B col 1 :  
+Enter a string made of either 0's and/or 1's: 0110
+Stack
+S
+------------------
+Current char is: 0
+Adding rhs of a rule to the stack
+
+Stack
+0
+A
+0
+------------------
+Current char is: 0
+matched!
+
+Stack
+A
+0
+------------------
+Current char is: 1
+Adding rhs of a rule to the stack
+
+Stack
+1
+1
+0
+------------------
+Current char is: 1
+matched!
+
+Stack
+1
+0
+------------------
+Current char is: 1
+matched!
+
+Stack
+0
+------------------
+Current char is: 0
+matched!
+
+Stack
+[ empty ]
+------------------
+Success!!
+]0;brune010@empress:~/cs421/DemosAndEC/4_LL1[brune010@empress 4_LL1]$ exit
+exit
+
+Script done on Wed 15 Nov 2017 11:58:55 AM PST
