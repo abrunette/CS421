@@ -198,6 +198,11 @@ bool match(char compare, char matchThis)
 }
 
 
+//Purpose: To reverse a string within itself.
+//User information: Input a string
+//Algorithm: Uses a for loop to swap end characters
+//Input:  User string
+//Output: Reversed user string
 void reverse(string &reverseThis)
 {
 	int check = 1;		//loop check
