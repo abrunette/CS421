@@ -198,6 +198,29 @@ bool match(char compare, char matchThis)
 }
 
 
+void reverse(string &reverseThis)
+{
+	int check = 1;		//loop check
+	char left, right;	//holding vars for swap
+
+	int start = 0;				//start of string
+	int end = reverseThis.length() - 1;	//end of string
+
+	for(int count = 0; count < (reverseThis.length() / 2); count++)
+	{
+		left = reverseThis[start];	//start from beginning
+		right = reverseThis[end];	//start from end
+
+		//swap characters
+		reverseThis[start] = right;
+		reverseThis[end] = left;
+
+		start++;	//move swap up
+		end--;		//move swap down
+	}
+}
+
+
 //Purpose: parse a string of 0's and 1's using
 // a stack and a predefined set of grammar rules
 // using leftmost derivation
@@ -322,6 +345,7 @@ void LLParse(string parseThis)
 		if(rhs)		//check if rhs should be applied
 		{
 			theRule = theTable[row][col];
+			reverse(theRule);
 			printf("Adding rhs of a rule to the stack\n\n");
 			while(!theRule.empty())	//push rhs rule onto stack
 			{
